@@ -1,0 +1,26 @@
+/*!
+Theme Name: Starter Theme
+Theme URI: http://example.com/
+Author: Emerson Loustau
+Author URI: http://www.secretdesignproject.com
+Description: A responsive theme...
+Version: 1.0-wpcom
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: example
+Domain Path: /languages/
+*/
+
+@import "partials/base";
+
+@import "partials/normalize";
+@import "partials/typography";
+@import "partials/tables";
+@import "partials/forms";
+@import "partials/navigation";
+@import "partials/accessibility";
+@import "partials/utilities";
+@import "partials/widgets";
+@import "partials/content";
+@import "partials/media";
+@import "partials/infinite-scroll";

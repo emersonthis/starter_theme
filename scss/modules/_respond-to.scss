@@ -1,0 +1,24 @@
+//Setting defualts
+$xsmall : 320px; 
+$small : 768px; //phones
+$medium : 1024; //tablets
+
+$breakpoints: ( 
+    'xsmall' : (max-width: $xsmall),
+    'small': (max-width: $small),
+    'medium': (max-width: $medium),
+    'large': (min-width: #{$medium + 1}) 
+) !default;
+
+@mixin respond-to($name) {
+    @if map-has-key($breakpoints, $name) {
+        @media #{inspect(map-get($breakpoints, $name))} {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$name}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+    }
+}
